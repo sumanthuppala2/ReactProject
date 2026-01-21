@@ -36,7 +36,6 @@ const ProductItem = ({
     reorderedVariants.splice(draggedVariant, 1);
     reorderedVariants.splice(index, 0, draggedItem);
     
-    // Update the product with reordered variants
     onProductDiscountChange(product.id, {
       ...product,
       variants: reorderedVariants
