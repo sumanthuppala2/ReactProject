@@ -222,13 +222,16 @@ const ProductList = () => {
 
   const getProductsList = async () => {
 
+    const apiKey=import.meta.env.VITE_API_KEY;
+    const baseUrl=import.meta.env.VITE_BASE_URL
+
 
     try {
 
-      const response = await axios.get(`https://stageapi.monkcommerce.app/task/products/search?search=Hat&page=2&limit=1`, {
+      const response = await axios.get(`${baseUrl}?search=Hat&page=2&limit=1`, {
 
         headers: {
-          "x-api-key": "72njgfa948d9aS7gs5"
+          "x-api-key": apiKey
         }
       })
 
